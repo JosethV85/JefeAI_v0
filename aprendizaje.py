@@ -65,3 +65,33 @@ def aprender_intencion(mensaje, intencion, entrenamiento):
         return f"Aprendido. Ahora sé que '{mensaje}' significa '{intencion}'. 🧠"
 
     return "Esa frase ya la conocía. 😎"
+
+
+def aprender_respuesta(mensaje, intencion, respuesta, respuestas):
+
+    mensaje = mensaje.lower().strip()
+    respuesta = respuesta.strip()
+
+    if "frases" not in respuestas:
+        respuestas["frases"] = {}
+
+    if mensaje not in respuestas["frases"]:
+
+        respuestas["frases"][mensaje] = respuesta
+
+        with open(
+            "respuestas.json",
+            "w",
+            encoding="utf-8"
+        ) as archivo:
+
+            json.dump(
+                respuestas,
+                archivo,
+                indent=4,
+                ensure_ascii=False
+            )
+
+        return "Respuesta aprendida. 🧠"
+
+    return "Esa frase ya tenía una respuesta. 😎"

@@ -15,5 +15,13 @@
         "adiós",
         "hasta luego",
         "nos vemos"
+    ],
+    "pregunta": [
+        "que haces",
+        "qué haces cuando nadie te habla",
+        "todo bien?"
+    ],
+    "afirmacion": [
+        "todo bien"
     ]
 }

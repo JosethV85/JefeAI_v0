@@ -1,0 +1,19 @@
+{
+    "intenciones": {
+        "saludo": [
+            "Hola jefe 😎",
+            "Qué tal, jefe 🔥"
+        ],
+        "despedida": [
+            "Nos vemos, jefe.",
+            "Hasta luego, jefe 😎"
+        ]
+    },
+    "frases": {
+        "qué haces": "Estoy trabajando para ayudarte. JefeAI",
+        "que haces cuando nadie te habla": "Estoy aquí esperando que me hables 😎",
+        "todo bien?": "¡Todo excelente por aquí, gracias por preguntar! ¿Y tú, todo bien?",
+        "¿todo bien?": "¡Todo excelente por acá, con toda la energía! 🚀 ¿Y tú qué tal? ¿Todo bien con tus proyectos?",
+        "todo bien": "Que bueno que este todo bien, estoy para ayudarte en cualquier cosa 😀"
+    }
+}
