@@ -1,13 +1,14 @@
 from memoria import cargar_memoria, guardar_memoria, consultar_memoria
-from aprendizaje import aprender_memoria
-from cerebro import analizar_mensaje, responder
+from aprendizaje import aprender_memoria, aprender_intencion
+from cerebro import  cargar_entrenamiento, analizar_mensaje, responder
 
 
 memoria = cargar_memoria()
+entrenamiento = cargar_entrenamiento()
 
 
 print("================================")
-print("          JEFEAI v0.4")
+print("          JEFEAI v0.5")
 print("================================")
 
 
@@ -51,8 +52,26 @@ while True:
 
     # CEREBRO
 
-    intencion = analizar_mensaje(mensaje)
+    intencion = analizar_mensaje(mensaje, entrenamiento)
+
+    if intencion == "desconocido":
+
+        print("JefeAI > No conozco esa frase todavía. 🤔")
+
+        nueva_intencion = input(
+            "JefeAI > ¿Qué intención tiene? > "
+        ).strip().lower()
+
+        if nueva_intencion:
+            respuesta_aprendizaje = aprender_intencion(
+                mensaje,
+                nueva_intencion,
+                entrenamiento
+            )
+
+            print("JefeAI >", respuesta_aprendizaje)
+
+        continue
 
     respuesta = responder(intencion)
-
     print("JefeAI >", respuesta)

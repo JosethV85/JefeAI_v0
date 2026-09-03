@@ -1,0 +1,19 @@
+{
+    "saludo": [
+        "hola",
+        "buenas",
+        "hey",
+        "holi",
+        "qué tal",
+        "que tal",
+        "buen día",
+        "buenos días jefe",
+        "ola"
+    ],
+    "despedida": [
+        "adios",
+        "adiós",
+        "hasta luego",
+        "nos vemos"
+    ]
+}
